@@ -1,4 +1,3 @@
-import { info } from "console";
 import { useEffect, useState } from "react";
 import Box from "../../components/Box/Box";
 import Header from "../../components/Header/Header";
@@ -13,26 +12,26 @@ function Home() {
 // },[]);
 
 //usando async
-const [info, setInfo] = useState()
+const [, setInfo] = useState()
 useEffect(() => {
   const i = async () => {
-   return setInfo((await baseApi.get("/")).data)
+   const response = (await baseApi.get("/"))
+   setInfo(response.data)
   } 
+  i()
  },[]);
-
-
 
   return (
     <>
     <Header />
     <Box background="cinza">
-      <h2> {info}</h2>
+      <h2> hello</h2>
     </Box>     
     <Box background="rosa">
       <h2> conteúdo 2</h2>
     </Box>   
     </>
-  );
+    
+  )
 }
-
 export default Home;
