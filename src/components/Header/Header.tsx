@@ -10,6 +10,7 @@ export default function Header() {
             <Link texto="Home" redirect="/" />
             <Link texto="Blog" redirect="/blog" />
             <Link texto="Contato" redirect="/contato" />
+            <Link texto="Tete" redirect="/teste" />
             </nav>
         </header>
     )
